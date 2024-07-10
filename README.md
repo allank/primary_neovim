@@ -6,7 +6,13 @@ Simple application of the color scheme from the [Primary](https://github.com/pri
 
 ## Installation
 
-- Copy `colorscheme.lua` into your `.config/nvim` directory
-- Edit `.config/nvim/init.lua` to set the color scheme : `vim.cmd("luafile colorscheme.lua")`
+Copy `colorscheme.lua` into your `.config/nvim` directory.
+
+Edit `.config/nvim/init.lua` to set the color scheme :
+
+```
+local color_file = ("%s/colorscheme.lua"):format(vim.fn.stdpath("config"))
+vim.cmd(("luafile %s"):format(color_file))
+```
 
 
